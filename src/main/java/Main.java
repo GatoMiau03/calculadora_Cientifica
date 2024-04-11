@@ -1,12 +1,14 @@
+import org.w3c.dom.ls.LSOutput;
+
 public class Main {
     public static void main(String[] args) {
         double A = 2;
         double B = 14;
         double C = 8;
 
-        double D = 0;
-        double E = 0;
-        double F = 0;
+        double D = 6;
+        double E = 8;
+        double F = 5;
 
         double det = A * E - B * D;
         if (det == 0) {
