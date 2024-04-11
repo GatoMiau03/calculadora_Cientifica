@@ -1,3 +1,4 @@
+import java.util.Scanner;
 import java.lang.Math;
 
 
@@ -42,9 +43,50 @@ public class Main {
 
     //VOLUMEN
     public static double volumenCirculo (int radio){
-        double aaa= (double) 4/3;
-        return (aaa)*Math.PI*(radio^3);
+        double a= (double) 4/3;
+        return (a)*Math.PI*(radio^3);
     }
+
+    //metodo para la esfera
+
+    //ÁREA
+    public static double areaEsfera (int radio){
+        return 4*Math.PI*(radio*radio);
+    }
+
+    //VOLUMEN
+    public static double volumenEsfera (int radio){
+        double aa= (double) 4/3;
+        return (aa)*Math.PI*(radio^3);
+    }
+
+    //metodo para el cubo
+
+    //ÁREA
+    public static int areaCubo (int lado){
+        return 6*(lado*lado);
+    }
+
+    //VOLUMEN
+    public static int volumenCubo (int lado){
+        return lado*lado*lado;
+    }
+
+    //metodo para el cono
+
+    //ÁREA
+    public static double areaCono (int radio, int generatriz){
+        return Math.PI*radio*(radio+generatriz);
+    }
+
+    //VOLUMEN
+    public static double volumenCono (int radio, int altura){
+        double aaa= (double) 1/3;
+        return aaa*Math.PI*(radio*radio)*altura;
+    }
+
+
+
 
 
 
