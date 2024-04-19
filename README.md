@@ -25,7 +25,7 @@ Metodo creado por Carlos Pérez y pruebas unitarias:
 
 
 
-Metodos creados por Luis Toro y pruebas unitarias:
+Metodos creados por Luis Toro, pruebas unitarias y menu optimizado:
 ![Captura desde 2024-04-19 02-39-31](https://github.com/GatoMiau03/calculadora_Cientifica/assets/163322706/3781c2cc-6669-466b-90cd-2a0024f7dd11)
 ![Captura desde 2024-04-19 02-39-44](https://github.com/GatoMiau03/calculadora_Cientifica/assets/163322706/ea088c46-7ec3-4670-bfee-3de3d5ab81dd)
 ![Captura desde 2024-04-19 02-39-54](https://github.com/GatoMiau03/calculadora_Cientifica/assets/163322706/ed48af10-f2cc-482e-891a-42bc06415c55)
@@ -35,6 +35,14 @@ pruebas unitarias:
 ![Captura desde 2024-04-19 02-43-25](https://github.com/GatoMiau03/calculadora_Cientifica/assets/163322706/2486ba78-f21f-48f7-8385-b5b26f5138a1)
 ![Captura desde 2024-04-19 02-43-31](https://github.com/GatoMiau03/calculadora_Cientifica/assets/163322706/d090360e-229f-49b0-b494-7067ea942c5c)
 ![Captura desde 2024-04-19 02-43-52](https://github.com/GatoMiau03/calculadora_Cientifica/assets/163322706/2ff97794-1cf1-491a-b4d5-278d7fad556c)
+menu optimizado:
+![Captura desde 2024-04-19 02-47-54](https://github.com/GatoMiau03/calculadora_Cientifica/assets/163322706/ad5f36f0-55bc-4732-9719-dda312a10e4c)
+![Captura desde 2024-04-19 02-48-01](https://github.com/GatoMiau03/calculadora_Cientifica/assets/163322706/b473077a-908f-48d9-81f8-7d9927ef4ab6)
+![Captura desde 2024-04-19 02-48-06](https://github.com/GatoMiau03/calculadora_Cientifica/assets/163322706/9645b269-825f-4868-bded-75cf87730b88)
+![Captura desde 2024-04-19 02-48-11](https://github.com/GatoMiau03/calculadora_Cientifica/assets/163322706/e99e3991-8031-4778-9218-23b4b1dc68a3)
+![Captura desde 2024-04-19 02-48-20](https://github.com/GatoMiau03/calculadora_Cientifica/assets/163322706/c079ebd7-5ea1-450d-a096-297fe27bd8f8)
+![Captura desde 2024-04-19 02-48-26](https://github.com/GatoMiau03/calculadora_Cientifica/assets/163322706/d5df5adb-e752-46a4-b788-7eb243315366)
+![Captura desde 2024-04-19 02-48-30](https://github.com/GatoMiau03/calculadora_Cientifica/assets/163322706/9077c1cb-9275-4434-a1b9-008125bec322)
 
 
 
