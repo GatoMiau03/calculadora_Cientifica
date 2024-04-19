@@ -327,6 +327,7 @@ public class Main {
             System.out.println("20. Área de un cono");
             System.out.println("21. Volumen de un cono");
             System.out.println("22. Resolver sistema de ecuaciones lineales");
+            System.out.println("23. Calcular ecuacion de la recta");
             System.out.println("0. Salir");
 
             try {
