@@ -261,7 +261,7 @@
                 case 5:
                     System.out.print("Ingrese el lado del cubo: ");
                     lado = scanner.nextInt();
-                    System.out.println("El área del cubo es: " + areaCubo(lado));
+                    System.out.println("El area del cubo es: " + areaCubo(lado));
                     break;
                 case 6:
                     System.out.print("Ingrese el radio del cono: ");
