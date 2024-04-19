@@ -85,6 +85,9 @@ public class Main {
         return numero;
     }
 
+    //--------------------metodo para el cuadrado-------------------//
+
+    //ÁREA
     public static int areaCuadrado(int lado) {
         try {
             if (lado <= 0) {
@@ -97,6 +100,7 @@ public class Main {
         }
     }
 
+    //PERÍMETRO
     public static int perimetroCuadrado(int lado) {
         try {
             if (lado <= 0) {
@@ -108,7 +112,9 @@ public class Main {
             return -1;
         }
     }
+    //-----------------metodo para el rectángulo-------------------//
 
+    //ÁREA
     public static int areaRectangulo(int base, int altura) {
         try {
             if (base <= 0 || altura <= 0) {
@@ -121,6 +127,7 @@ public class Main {
         }
     }
 
+    //PERÍMETRO
     public static int perimetroRectangulo(int base, int altura) {
         try {
             if (base <= 0 || altura <= 0) {
@@ -133,6 +140,9 @@ public class Main {
         }
     }
 
+    //------------------metodo para el círculo-------------------//
+
+    //ÁREA
     public static double areaCirculo(int radio) {
         try {
             if (radio <= 0) {
@@ -144,7 +154,7 @@ public class Main {
             return -1;
         }
     }
-
+    //PERÍMETRO
     public static double perimetroCirculo(int radio) {
         try {
             if (radio <= 0) {
@@ -157,6 +167,9 @@ public class Main {
         }
     }
 
+    //--------------------metodo para la esfera-------------------//
+
+    //ÁREA
     public static double areaEsfera(int radio) {
         try {
             if (radio <= 0) {
@@ -169,6 +182,8 @@ public class Main {
         }
     }
 
+
+    //VOLUMEN
     public static double volumenEsfera(int radio) {
         try {
             if (radio <= 0) {
@@ -181,7 +196,9 @@ public class Main {
             return -1;
         }
     }
+    //----------------------metodo para el cubo-------------------//
 
+    //ÁREA
     public static int areaCubo(int lado) {
         try {
             if (lado <= 0) {
@@ -193,7 +210,7 @@ public class Main {
             return -1;
         }
     }
-
+    //VOLUMEN
     public static int volumenCubo(int lado) {
         try {
             if (lado <= 0) {
@@ -206,6 +223,9 @@ public class Main {
         }
     }
 
+    //-----------------------metodo para el cono-------------------//
+
+    //ÁREA
     public static double areaCono(int radio, int generatriz) {
         try {
             if (radio <= 0 || generatriz <= 0) {
@@ -217,7 +237,7 @@ public class Main {
             return -1;
         }
     }
-
+    //VOLUMEN
     public static double volumenCono(int radio, int altura) {
         try {
             if (radio <= 0 || altura <= 0) {
@@ -299,35 +319,19 @@ public class Main {
         System.out.println("La ecuación de la recta es: Y = " + resultado[0] + "X + " + resultado[1]);
     }
     public static void main(String[] args) {
+        mostrarMenuGeneral();
+    }
+
+    public static void mostrarMenuGeneral() {
         Scanner scanner = new Scanner(System.in);
         int opcion = 0;
-        double a, b, c;
 
         do {
-            System.out.println("Selecciona una opción:");
-            System.out.println("1. Suma");
-            System.out.println("2. Resta");
-            System.out.println("3. Multiplicación");
-            System.out.println("4. División");
-            System.out.println("5. Máximo");
-            System.out.println("6. Mínimo");
-            System.out.println("7. Potencia");
-            System.out.println("8. Porcentaje");
-            System.out.println("9. Soluciones cuadráticas");
-            System.out.println("10. Área de un cuadrado");
-            System.out.println("11. Perímetro de un cuadrado");
-            System.out.println("12. Área de un rectángulo");
-            System.out.println("13. Perímetro de un rectángulo");
-            System.out.println("14. Área de un círculo");
-            System.out.println("15. Perímetro de un círculo");
-            System.out.println("16. Área de una esfera");
-            System.out.println("17. Volumen de una esfera");
-            System.out.println("18. Área de un cubo");
-            System.out.println("19. Volumen de un cubo");
-            System.out.println("20. Área de un cono");
-            System.out.println("21. Volumen de un cono");
-            System.out.println("22. Resolver sistema de ecuaciones lineales");
-            System.out.println("23. Calcular ecuacion de la recta");
+            System.out.println("Menú general:");
+            System.out.println("1. Operaciones numericas");
+            System.out.println("2. Figuras geometricas");
+            System.out.println("3. Sistema de ecuaciones");
+            System.out.println("4. Ecuacion de la recta");
             System.out.println("0. Salir");
 
             try {
@@ -335,30 +339,78 @@ public class Main {
 
                 switch (opcion) {
                     case 1:
-                        System.out.print("Ingresa el primer número: ");
+                        mostrarMenuOperacionesNumericas();
+                        break;
+                    case 2:
+                        mostrarMenuFigurasGeometricas();
+                        break;
+                    case 3:
+                        resolverSistemaLinear();
+                        break;
+                    case 4:
+                        calcularEcuacionRecta();
+                        break;
+                    case 0:
+                        System.out.println("Saliendo...");
+                        break;
+                    default:
+                        System.out.println("Opcion invalida");
+                }
+            } catch (InputMismatchException e) {
+                System.out.println("ERROOOR. La entrada no puede ser una letra");
+                scanner.nextLine();
+            }
+        } while (opcion != 0);
+
+        scanner.close();
+    }
+
+    public static void mostrarMenuOperacionesNumericas() {
+        Scanner scanner = new Scanner(System.in);
+        int opcion = 0;
+        double a, b;
+
+        do {
+            System.out.println("Operaciones numrricas:");
+            System.out.println("1. Suma");
+            System.out.println("2. Resta");
+            System.out.println("3. Multiplicacion");
+            System.out.println("4. Division");
+            System.out.println("5. Maximo");
+            System.out.println("6. Minimo");
+            System.out.println("7. Potencia");
+            System.out.println("8. Porcentaje");
+            System.out.println("0. Volver al menu general");
+
+            try {
+                opcion = scanner.nextInt();
+
+                switch (opcion) {
+                    case 1:
+                        System.out.print("Ingresa el primer numero: ");
                         a = pedirNumero();
-                        System.out.print("Ingresa el segundo número: ");
+                        System.out.print("Ingresa el segundo numero: ");
                         b = pedirNumero();
                         System.out.println("Resultado: " + suma(a, b));
                         break;
                     case 2:
-                        System.out.print("Ingresa el primer número: ");
+                        System.out.print("Ingresa el primer numero: ");
                         a = pedirNumero();
-                        System.out.print("Ingresa el segundo número: ");
+                        System.out.print("Ingresa el segundo numero: ");
                         b = pedirNumero();
                         System.out.println("Resultado: " + resta(a, b));
                         break;
                     case 3:
-                        System.out.print("Ingresa el primer número: ");
+                        System.out.print("Ingresa el primer numero: ");
                         a = pedirNumero();
-                        System.out.print("Ingresa el segundo número: ");
+                        System.out.print("Ingresa el segundo numero: ");
                         b = pedirNumero();
                         System.out.println("Resultado: " + multiplicacion(a, b));
                         break;
                     case 4:
-                        System.out.print("Ingresa el primer número: ");
+                        System.out.print("Ingresa el primer numero: ");
                         a = pedirNumero();
-                        System.out.print("Ingresa el segundo número: ");
+                        System.out.print("Ingresa el segundo numero: ");
                         b = pedirNumero();
                         double resultadoDivision = division(a, b);
                         if (!Double.isNaN(resultadoDivision)) {
@@ -366,16 +418,16 @@ public class Main {
                         }
                         break;
                     case 5:
-                        System.out.print("Ingresa el primer número: ");
+                        System.out.print("Ingresa el primer numero: ");
                         a = pedirNumero();
-                        System.out.print("Ingresa el segundo número: ");
+                        System.out.print("Ingresa el segundo numero: ");
                         b = pedirNumero();
                         System.out.println("Resultado: " + maximo(a, b));
                         break;
                     case 6:
-                        System.out.print("Ingresa el primer número: ");
+                        System.out.print("Ingresa el primer numero: ");
                         a = pedirNumero();
-                        System.out.print("Ingresa el segundo número: ");
+                        System.out.print("Ingresa el segundo numero: ");
                         b = pedirNumero();
                         System.out.println("Resultado: " + minimo(a, b));
                         break;
@@ -387,110 +439,128 @@ public class Main {
                         System.out.println("Resultado: " + potencia(a, b));
                         break;
                     case 8:
-                        System.out.print("Ingresa el número: ");
+                        System.out.print("Ingresa el numero: ");
                         a = pedirNumero();
                         System.out.print("Ingresa el porcentaje: ");
                         b = pedirNumero();
                         System.out.println("Resultado: " + porcentaje(a, b));
                         break;
-                    case 9:
-                        System.out.print("Ingresa el coeficiente a: ");
-                        a = pedirNumero();
-                        System.out.print("Ingresa el coeficiente b: ");
-                        b = pedirNumero();
-                        System.out.print("Ingresa el coeficiente c: ");
-                        c = pedirNumero();
-                        double[] soluciones = solucionesCuadraticas(a, b, c);
-                        if (!Double.isNaN(soluciones[0]) && !Double.isNaN(soluciones[1])) {
-                            System.out.println("Soluciones: x1 = " + soluciones[0] + ", x2 = " + soluciones[1]);
-                        }
+                    case 0:
+                        System.out.println("Volviendo al menu general");
                         break;
-                    case 10:
+                    default:
+                        System.out.println("Opcion invalida.");
+                }
+            } catch (InputMismatchException e) {
+                System.out.println("ERROOOR. La entrada no puede ser una letra");
+                scanner.nextLine();
+            }
+        } while (opcion != 0);
+    }
+
+    public static void mostrarMenuFigurasGeometricas() {
+        Scanner scanner = new Scanner(System.in);
+        int opcion = 0;
+
+        do {
+            System.out.println("Figuras geometricas:");
+            System.out.println("1. Area de un cuadrado");
+            System.out.println("2. Perimetro de un cuadrado");
+            System.out.println("3. Area de un rectangulo");
+            System.out.println("4. Perimetro de un rectangulo");
+            System.out.println("5. Area de un circulo");
+            System.out.println("6. Perimetro de un circulo");
+            System.out.println("7. Area de una esfera");
+            System.out.println("8. Volumen de una esfera");
+            System.out.println("9. Area de un cubo");
+            System.out.println("10. Volumen de un cubo");
+            System.out.println("11. Area de un cono");
+            System.out.println("12. Volumen de un cono");
+            System.out.println("0. Volver al menu general");
+
+            try {
+                opcion = scanner.nextInt();
+
+                switch (opcion) {
+                    case 1:
                         System.out.print("Ingresa el lado del cuadrado: ");
                         int ladoCuadrado = scanner.nextInt();
-                        System.out.println("Área: " + areaCuadrado(ladoCuadrado));
+                        System.out.println("Area: " + areaCuadrado(ladoCuadrado));
                         break;
-                    case 11:
+                    case 2:
                         System.out.print("Ingresa el lado del cuadrado: ");
                         int ladoCuadradoPerimetro = scanner.nextInt();
-                        System.out.println("Perímetro: " + perimetroCuadrado(ladoCuadradoPerimetro));
+                        System.out.println("Perimetro: " + perimetroCuadrado(ladoCuadradoPerimetro));
                         break;
-                    case 12:
-                        System.out.print("Ingresa la base del rectángulo: ");
+                    case 3:
+                        System.out.print("Ingresa la base del rectangulo: ");
                         int baseRectangulo = scanner.nextInt();
-                        System.out.print("Ingresa la altura del rectángulo: ");
+                        System.out.print("Ingresa la altura del rectangulo: ");
                         int alturaRectangulo = scanner.nextInt();
-                        System.out.println("Área: " + areaRectangulo(baseRectangulo, alturaRectangulo));
+                        System.out.println("Area: " + areaRectangulo(baseRectangulo, alturaRectangulo));
                         break;
-                    case 13:
-                        System.out.print("Ingresa la base del rectángulo: ");
+                    case 4:
+                        System.out.print("Ingresa la base del rectangulo: ");
                         int baseRectanguloPerimetro = scanner.nextInt();
-                        System.out.print("Ingresa la altura del rectángulo: ");
+                        System.out.print("Ingresa la altura del rectangulo: ");
                         int alturaRectanguloPerimetro = scanner.nextInt();
-                        System.out.println("Perímetro: " + perimetroRectangulo(baseRectanguloPerimetro, alturaRectanguloPerimetro));
+                        System.out.println("Perimetro: " + perimetroRectangulo(baseRectanguloPerimetro, alturaRectanguloPerimetro));
                         break;
-                    case 14:
-                        System.out.print("Ingresa el radio del círculo: ");
+                    case 5:
+                        System.out.print("Ingresa el radio del circulo: ");
                         int radioCirculo = scanner.nextInt();
-                        System.out.println("Área: " + areaCirculo(radioCirculo));
+                        System.out.println("Area: " + areaCirculo(radioCirculo));
                         break;
-                    case 15:
-                        System.out.print("Ingresa el radio del círculo: ");
+                    case 6:
+                        System.out.print("Ingresa el radio del circulo: ");
                         int radioCirculoPerimetro = scanner.nextInt();
-                        System.out.println("Perímetro: " + perimetroCirculo(radioCirculoPerimetro));
+                        System.out.println("Perimetro: " + perimetroCirculo(radioCirculoPerimetro));
                         break;
-                    case 16:
+                    case 7:
                         System.out.print("Ingresa el radio de la esfera: ");
                         int radioEsfera = scanner.nextInt();
-                        System.out.println("Área: " + areaEsfera(radioEsfera));
+                        System.out.println("Area: " + areaEsfera(radioEsfera));
                         break;
-                    case 17:
+                    case 8:
                         System.out.print("Ingresa el radio de la esfera: ");
                         int radioEsferaVolumen = scanner.nextInt();
                         System.out.println("Volumen: " + volumenEsfera(radioEsferaVolumen));
                         break;
-                    case 18:
+                    case 9:
                         System.out.print("Ingresa el lado del cubo: ");
                         int ladoCubo = scanner.nextInt();
-                        System.out.println("Área: " + areaCubo(ladoCubo));
+                        System.out.println("Area: " + areaCubo(ladoCubo));
                         break;
-                    case 19:
+                    case 10:
                         System.out.print("Ingresa el lado del cubo: ");
                         int ladoCuboVolumen = scanner.nextInt();
                         System.out.println("Volumen: " + volumenCubo(ladoCuboVolumen));
                         break;
-                    case 20:
+                    case 11:
                         System.out.print("Ingresa el radio del cono: ");
                         int radioCono = scanner.nextInt();
                         System.out.print("Ingresa la generatriz del cono: ");
                         int generatrizCono = scanner.nextInt();
-                        System.out.println("Área: " + areaCono(radioCono, generatrizCono));
+                        System.out.println("Area: " + areaCono(radioCono, generatrizCono));
                         break;
-                    case 21:
+                    case 12:
                         System.out.print("Ingresa el radio del cono: ");
-                        int radioConoVolumen = scanner.nextInt();
+                        System.out.print("Ingresa el radio del cono: ");
+                        int radio = scanner.nextInt();
                         System.out.print("Ingresa la altura del cono: ");
-                        int alturaConoVolumen = scanner.nextInt();
-                        System.out.println("Volumen: " + volumenCono(radioConoVolumen, alturaConoVolumen));
-                        break;
-                    case 22:
-                        resolverSistemaLinear();
-                        break;
-                    case 23:
-                        calcularEcuacionRecta();
+                        int altura = scanner.nextInt();
+                        System.out.println("Volumen: " + volumenCono(radio, altura));
                         break;
                     case 0:
-                        System.out.println("Saliendo...");
+                        System.out.println("Volviendo al menu general");
                         break;
                     default:
-                        System.out.println("Opción inválida. Inténtalo de nuevo.");
+                        System.out.println("ERROR. Opcion invalida.");
                 }
             } catch (InputMismatchException e) {
-                System.out.println("Error: La entrada debe ser un número. Inténtalo de nuevo.");
+                System.out.println("ERROOOR. La entrada no puede ser una letra");
                 scanner.nextLine();
             }
         } while (opcion != 0);
-
-        scanner.close();
     }
 }
