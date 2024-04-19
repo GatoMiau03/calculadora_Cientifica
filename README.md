@@ -11,4 +11,7 @@ Metodos creados por Diego Beñaldo
 ![image](https://github.com/GatoMiau03/calculadora_Cientifica/assets/142507343/8b69ff4d-8787-424b-8a25-db63907f994e)  
 ![image](https://github.com/GatoMiau03/calculadora_Cientifica/assets/142507343/0fec25df-87ad-4840-9059-da78cbd21b38)  
 ![image](https://github.com/GatoMiau03/calculadora_Cientifica/assets/142507343/c895803a-8c03-4168-9725-0de0334a8ca3)  
-![image](https://github.com/GatoMiau03/calculadora_Cientifica/assets/142507343/802f3d3c-b600-492f-a7bb-416b01e0f653)
+![image](https://github.com/GatoMiau03/calculadora_Cientifica/assets/142507343/802f3d3c-b600-492f-a7bb-416b01e0f653)  
+Metodo creado por Carlos Pérez y pruebas unitarias:  
+![WhatsApp Image 2024-04-19 at 02 30 22](https://github.com/GatoMiau03/calculadora_Cientifica/assets/163133151/3046638c-5973-4460-b8c6-42e3172d1df0)
+![WhatsApp Image 2024-04-19 at 02 29 41](https://github.com/GatoMiau03/calculadora_Cientifica/assets/163133151/2746b336-dfea-4b53-99c2-b85471bc551f)
