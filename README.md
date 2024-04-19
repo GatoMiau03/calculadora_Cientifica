@@ -22,3 +22,19 @@ Metodos creados por Diego Beñaldo y pruebas unitarias
 Metodo creado por Carlos Pérez y pruebas unitarias:  
 ![WhatsApp Image 2024-04-19 at 02 30 22](https://github.com/GatoMiau03/calculadora_Cientifica/assets/163133151/3046638c-5973-4460-b8c6-42e3172d1df0)
 ![WhatsApp Image 2024-04-19 at 02 29 41](https://github.com/GatoMiau03/calculadora_Cientifica/assets/163133151/2746b336-dfea-4b53-99c2-b85471bc551f)
+
+
+
+Metodos creados por Luis Toro y pruebas unitarias:
+![Captura desde 2024-04-19 02-39-31](https://github.com/GatoMiau03/calculadora_Cientifica/assets/163322706/3781c2cc-6669-466b-90cd-2a0024f7dd11)
+![Captura desde 2024-04-19 02-39-44](https://github.com/GatoMiau03/calculadora_Cientifica/assets/163322706/ea088c46-7ec3-4670-bfee-3de3d5ab81dd)
+![Captura desde 2024-04-19 02-39-54](https://github.com/GatoMiau03/calculadora_Cientifica/assets/163322706/ed48af10-f2cc-482e-891a-42bc06415c55)
+![Captura desde 2024-04-19 02-40-15](https://github.com/GatoMiau03/calculadora_Cientifica/assets/163322706/d771d19d-9507-4f01-964e-03f4c29631d3)
+![Captura desde 2024-04-19 02-40-26](https://github.com/GatoMiau03/calculadora_Cientifica/assets/163322706/9b17c894-4756-45cb-95a8-7e123c69ae84)
+pruebas unitarias:
+![Captura desde 2024-04-19 02-43-25](https://github.com/GatoMiau03/calculadora_Cientifica/assets/163322706/2486ba78-f21f-48f7-8385-b5b26f5138a1)
+![Captura desde 2024-04-19 02-43-31](https://github.com/GatoMiau03/calculadora_Cientifica/assets/163322706/d090360e-229f-49b0-b494-7067ea942c5c)
+![Captura desde 2024-04-19 02-43-52](https://github.com/GatoMiau03/calculadora_Cientifica/assets/163322706/2ff97794-1cf1-491a-b4d5-278d7fad556c)
+
+
+
