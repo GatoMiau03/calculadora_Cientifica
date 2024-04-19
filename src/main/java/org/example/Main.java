@@ -231,6 +231,34 @@ public class Main {
         }
     }
 
+    public static double[] resolverSistema(double A, double B, double C, double D, double E, double F) {
+        double determinantePrincipal = A * E - B * D;
+
+        if (Math.abs(determinantePrincipal) < 1e-10) {
+            return null;
+        }
+
+        double x = (C * E - B * F) / determinantePrincipal;
+        double y = (A * F - C * D) / determinantePrincipal;
+
+        return new double[]{x, y};
+    }
+
+    public static void resolverSistemaLinear() {
+        double A = 2, B = 3, C = 7;
+        double D = 1, E = 2, F = 5;
+
+        double[] solucion = resolverSistema(A, B, C, D, E, F);
+
+        if (solucion != null) {
+            System.out.println("La solución del sistema de ecuaciones es:");
+            System.out.println("x = " + solucion[0]);
+            System.out.println("y = " + solucion[1]);
+        } else {
+            System.out.println("El sistema no tiene una solución única.");
+        }
+    }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int opcion = 0;
@@ -259,6 +287,7 @@ public class Main {
             System.out.println("19. Volumen de un cubo");
             System.out.println("20. Área de un cono");
             System.out.println("21. Volumen de un cono");
+            System.out.println("22. Resolver sistema de ecuaciones lineales");
             System.out.println("0. Salir");
 
             try {
@@ -403,6 +432,9 @@ public class Main {
                         System.out.print("Ingresa la altura del cono: ");
                         int alturaConoVolumen = scanner.nextInt();
                         System.out.println("Volumen: " + volumenCono(radioConoVolumen, alturaConoVolumen));
+                        break;
+                    case 22:
+                        resolverSistemaLinear();
                         break;
                     case 0:
                         System.out.println("Saliendo...");
