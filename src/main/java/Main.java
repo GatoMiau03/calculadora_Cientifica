@@ -1,3 +1,4 @@
+    import java.util.InputMismatchException;
     import java.util.Scanner;
     import java.lang.Math;
 
@@ -9,116 +10,217 @@
 
         //ÁREA
         public static int areaCuadrado(int lado) {
-            return lado * lado;
+            try {
+                if (lado <= 0) {
+                    throw new IllegalArgumentException("El lado no puede ser 0, negativo ni una letra.");
+                }
+                return lado * lado;
+            } catch (IllegalArgumentException e) {
+                System.out.println("Error: " + e.getMessage());
+                return -1;
+            }
         }
 
         //PERÍMETRO
         public static int perimetroCuadrado(int lado) {
-            return lado * 4;
+            try {
+                if (lado <= 0) {
+                    throw new IllegalArgumentException("El lado no puede ser 0, negativo ni una letra.");
+                }
+                return lado * 4;
+            } catch (IllegalArgumentException e) {
+                System.out.println("Error: " + e.getMessage());
+                return -1;
+            }
         }
-
         //-----------------metodo para el rectángulo-------------------//
 
         //ÁREA
         public static int areaRectangulo(int base, int altura) {
-            return base * altura;
+            try {
+                if (base <= 0 || altura <= 0) {
+                    throw new IllegalArgumentException("La base y la altura no pueden ser 0, negativas ni letras.");
+                }
+                return base * altura;
+            } catch (IllegalArgumentException e) {
+                System.out.println("Error: " + e.getMessage());
+                return -1;
+            }
         }
 
         //PERÍMETRO
         public static int perimetroRectangulo(int base, int altura) {
-            return (base * 2) + (altura * 2);
+            try {
+                if (base <= 0 || altura <= 0) {
+                    throw new IllegalArgumentException("La base y la altura no pueden ser 0, negativas ni letras.");
+                }
+                return (base * 2) + (altura * 2);
+            } catch (IllegalArgumentException e) {
+                System.out.println("Error: " + e.getMessage());
+                return -1;
+            }
         }
 
         //------------------metodo para el círculo-------------------//
 
         //ÁREA
         public static double areaCirculo(int radio) {
-            return Math.PI * (radio * radio);
+            try {
+                if (radio <= 0) {
+                    throw new IllegalArgumentException("El radio no puede ser 0, negativo ni una letra.");
+                }
+                return Math.PI * (radio * radio);
+            } catch (IllegalArgumentException e) {
+                System.out.println("Error: " + e.getMessage());
+                return -1;
+            }
         }
-
         //PERÍMETRO
         public static double perimetroCirculo(int radio) {
-            return 2 * Math.PI * radio;
-        }
-
-        //VOLUMEN
-        public static double volumenCirculo(int radio) {
-            double a = (double) 4 / 3;
-            return (a) * Math.PI * (radio ^ 3);
+            try {
+                if (radio <= 0) {
+                    throw new IllegalArgumentException("El radio no puede ser 0, negativo ni una letra.");
+                }
+                return 2 * Math.PI * radio;
+            } catch (IllegalArgumentException e) {
+                System.out.println("Error: " + e.getMessage());
+                return -1;
+            }
         }
 
         //--------------------metodo para la esfera-------------------//
 
         //ÁREA
         public static double areaEsfera(int radio) {
-            return 4 * Math.PI * (radio * radio);
+            try {
+                if (radio <= 0) {
+                    throw new IllegalArgumentException("El radio no puede ser 0, negativo ni una letra.");
+                }
+                return 4 * Math.PI * (radio * radio);
+            } catch (IllegalArgumentException e) {
+                System.out.println("Error: " + e.getMessage());
+                return -1;
+            }
         }
+
 
         //VOLUMEN
         public static double volumenEsfera(int radio) {
-            double aa = (double) 4 / 3;
-            return (aa) * Math.PI * (radio ^ 3);
+            try {
+                if (radio <= 0) {
+                    throw new IllegalArgumentException("El radio no puede ser 0, negativo ni una letra.");
+                }
+                double aa = (double) 4 / 3;
+                return (aa) * Math.PI * (radio * radio * radio);
+            } catch (IllegalArgumentException e) {
+                System.out.println("Error: " + e.getMessage());
+                return -1;
+            }
         }
-
         //----------------------metodo para el cubo-------------------//
 
         //ÁREA
         public static int areaCubo(int lado) {
-            return 6 * (lado * lado);
+            try {
+                if (lado <= 0) {
+                    throw new IllegalArgumentException("El lado no puede ser 0, negativo ni una letra.");
+                }
+                return 6 * (lado * lado);
+            } catch (IllegalArgumentException e) {
+                System.out.println("Error: " + e.getMessage());
+                return -1;
+            }
         }
-
         //VOLUMEN
         public static int volumenCubo(int lado) {
-            return lado * lado * lado;
+            try {
+                if (lado <= 0) {
+                    throw new IllegalArgumentException("El lado no puede ser 0, negativo ni una letra.");
+                }
+                return lado * lado * lado;
+            } catch (IllegalArgumentException e) {
+                System.out.println("Error: " + e.getMessage());
+                return -1;
+            }
         }
 
         //-----------------------metodo para el cono-------------------//
 
         //ÁREA
         public static double areaCono(int radio, int generatriz) {
-            return Math.PI * radio * (radio + generatriz);
+            try {
+                if (radio <= 0 || generatriz <= 0) {
+                    throw new IllegalArgumentException("El radio y la generatriz no pueden ser 0, negativos ni letras.");
+                }
+                return (radio + generatriz)* Math.PI * radio;
+            } catch (IllegalArgumentException e) {
+                System.out.println("Error: " + e.getMessage());
+                return -1;
+            }
         }
-
         //VOLUMEN
         public static double volumenCono(int radio, int altura) {
-            double aaa = (double) 1 / 3;
-            return aaa * Math.PI * (radio * radio) * altura;
+            try {
+                if (radio <= 0 || altura <= 0) {
+                    throw new IllegalArgumentException("El radio y la altura no pueden ser 0, negativos ni letras.");
+                }
+                double aaa = (double) 1 / 3;
+                return aaa * Math.PI * (radio * radio) * altura;
+            } catch (IllegalArgumentException e) {
+                System.out.println("Error: " + e.getMessage());
+                return -1;
+            }
         }
-
         public static void main(String[] args) {
-            Main sensor = new Main();
-            sensor.menu();
+            try {
+                Main sensor = new Main();
+                sensor.menuFiguras();
+            } catch (IllegalArgumentException e) {
+                System.out.println("Ingrese un opcion valida " + e.getMessage());
+            }
         }
 
         //===================MENU===================//
-        public void menu() {
-            int opcion;
+        public void menuFiguras() {
             Scanner scanner = new Scanner(System.in);
+            int opcion = -1;
+
             do {
-                System.out.println("\n =============Menú=============");
-                System.out.println("1. Calcular area de una figura");
-                System.out.println("2. Calcular perimetro de una figura");
-                System.out.println("3. Calcular volumen de una figura");
-                System.out.println("0. Salir del programa");
-                System.out.print("Seleccione una opcion: ");
-                opcion = scanner.nextInt();
-                switch (opcion) {
-                    case 1:
-                        calcularArea();
-                        break;
-                    case 2:
-                        calcularPerimetro();
-                        break;
-                    case 3:
-                        calcularVolumen();
-                        break;
-                    case 0:
-                        System.out.println("-Saliendo del programa-");
-                        break;
-                    default:
-                        System.out.println("EROOOOOOR. Intentelo nuevamente.");
+                try {
+                    System.out.println("\n =============Menu=============");
+                    System.out.println("1. Calcular area de una figura");
+                    System.out.println("2. Calcular perimetro de una figura");
+                    System.out.println("3. Calcular volumen de una figura");
+                    System.out.println("0. Salir del programa");
+                    System.out.print("Seleccione una opcion: ");
+
+                    // Intenta leer la opcion del usuario
+                    opcion = scanner.nextInt();
+
+                    // Switch para realizar la accion correspondiente
+                    switch (opcion) {
+                        case 1:
+                            calcularArea();
+                            break;
+                        case 2:
+                            calcularPerimetro();
+                            break;
+                        case 3:
+                            calcularVolumen();
+                            break;
+                        case 0:
+                            System.out.println("-Saliendo del programa-");
+                            break;
+                        default:
+                            System.out.println("Opcion no valida. Intente nuevamente.");
+                    }
+                } catch (InputMismatchException e) {
+                    // Captura la excepcion y maneja el error de entrada
+                    System.out.println("Entrada no valida. Intente ingresar un numero.");
+                    scanner.next(); // Limpiar el buffer del scanner
                 }
             } while (opcion != 0);
+
             scanner.close();
         }
 
@@ -131,6 +233,7 @@
             System.out.println("4. Esfera");
             System.out.println("5. Cubo");
             System.out.println("6. Cono");
+
             int opcion = scanner.nextInt();
             switch (opcion) {
                 case 1:
