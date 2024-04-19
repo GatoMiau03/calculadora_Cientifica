@@ -258,6 +258,42 @@ public class Main {
             System.out.println("El sistema no tiene una solución única.");
         }
     }
+    public static void calcularEcuacionRecta() {
+        Scanner scanner = new Scanner(System.in);
+        double x1 = 0, y1 = 0, x2 = 0, y2 = 0;
+        boolean entradaValida;
+
+        System.out.println("Ingresa las coordenadas del primer punto (x1, y1):");
+        entradaValida = false;
+        while (!entradaValida) {
+            try {
+                x1 = scanner.nextDouble();
+                y1 = scanner.nextDouble();
+                entradaValida = true;
+            } catch (InputMismatchException e) {
+                System.out.println("Error: La entrada debe ser un número. Inténtalo de nuevo.");
+                scanner.nextLine();
+            }
+        }
+
+        System.out.println("Ingresa las coordenadas del segundo punto (x2, y2):");
+        entradaValida = false;
+        while (!entradaValida) {
+            try {
+                x2 = scanner.nextDouble();
+                y2 = scanner.nextDouble();
+                entradaValida = true;
+            } catch (InputMismatchException e) {
+                System.out.println("Error: La entrada debe ser un número. Inténtalo de nuevo.");
+                scanner.nextLine();
+            }
+        }
+
+        double m = (y2 - y1) / (x2 - x1);
+        double b = y1 - m * x1;
+
+        System.out.println("La ecuación de la recta es: Y = " + m + "X + " + b);
+    }
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -435,6 +471,9 @@ public class Main {
                         break;
                     case 22:
                         resolverSistemaLinear();
+                        break;
+                    case 23:
+                        calcularEcuacionRecta();
                         break;
                     case 0:
                         System.out.println("Saliendo...");
