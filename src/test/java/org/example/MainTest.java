@@ -184,4 +184,19 @@ class MainTest {
         double expectedVolume = 261.7994;
         assertEquals(expectedVolume, Main.volumenCono(radio, altura), 0.0001);
     }
+    @Test
+    void testCalcularEcuacionRecta1() {
+        double[] expectedResult = {1.0, 1.0};
+        double[] actualResult = Main.calcularEcuacionRecta(1.0, 2.0, 2.0, 3.0);
+        assertArrayEquals(expectedResult, actualResult, 0.001);
+    }
+
+    @Test
+    void testCalcularEcuacionRecta2() {
+        double[] expectedResult = {-2.0, 5.0};
+        double[] actualResult = Main.calcularEcuacionRecta(2.0, 1.0, 3.0, -3.0);
+        assertArrayEquals(expectedResult, actualResult, 0.001);
+    }
 }
+
+

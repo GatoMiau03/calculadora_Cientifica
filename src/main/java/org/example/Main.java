@@ -258,6 +258,12 @@ public class Main {
             System.out.println("El sistema no tiene una solución única.");
         }
     }
+    public static double[] calcularEcuacionRecta(double x1, double y1, double x2, double y2) {
+        double m = (y2 - y1) / (x2 - x1);
+        double b = y1 - m * x1;
+        return new double[]{m, b};
+    }
+
     public static void calcularEcuacionRecta() {
         Scanner scanner = new Scanner(System.in);
         double x1 = 0, y1 = 0, x2 = 0, y2 = 0;
@@ -289,12 +295,9 @@ public class Main {
             }
         }
 
-        double m = (y2 - y1) / (x2 - x1);
-        double b = y1 - m * x1;
-
-        System.out.println("La ecuación de la recta es: Y = " + m + "X + " + b);
+        double[] resultado = calcularEcuacionRecta(x1, y1, x2, y2);
+        System.out.println("La ecuación de la recta es: Y = " + resultado[0] + "X + " + resultado[1]);
     }
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int opcion = 0;
